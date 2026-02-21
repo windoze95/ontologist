@@ -64,7 +64,7 @@ export default function AIChatPanel() {
           <div className="text-center py-8">
             <Bot className="h-10 w-10 text-navy-600 mx-auto mb-3" />
             <p className="text-sm text-slate-500">
-              Ask me anything about Foundry, FDE prep, or your study plan.
+              Ask me anything about Foundry or your study plan.
             </p>
             <p className="text-xs text-slate-600 mt-1">
               Mode: {AI_MODES.find((m) => m.value === state.aiMode)?.label}

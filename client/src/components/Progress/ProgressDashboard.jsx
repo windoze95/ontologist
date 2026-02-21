@@ -113,7 +113,7 @@ export default function ProgressDashboard() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-white">Progress Dashboard</h1>
-          <p className="text-sm text-slate-400">Track your FDE prep journey</p>
+          <p className="text-sm text-slate-400">Track your Foundry prep journey</p>
         </div>
       </div>
 
