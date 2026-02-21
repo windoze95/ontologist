@@ -46,6 +46,32 @@ npm run dev
 
 Open **http://localhost:5173** — you'll be greeted by the onboarding wizard on first run.
 
+### Docker
+
+```bash
+docker run -d \
+  -p 3001:3001 \
+  -e ANTHROPIC_API_KEY=your-key-here \
+  -v ontologist-data:/app/data \
+  ghcr.io/windoze95/ontologist:latest
+```
+
+Open **http://localhost:3001** after the container starts.
+
+### Unraid
+
+1. Copy the template to your Unraid flash drive:
+   ```
+   /boot/config/plugins/dockerMan/templates-user/my-ontologist.xml
+   ```
+   Download it from [`unraid/ontologist.xml`](unraid/ontologist.xml) in this repo.
+
+2. In the Unraid web UI, go to **Docker** tab → **Add Container** → select **Ontologist** from the template dropdown.
+
+3. Enter your **Anthropic API Key** and click **Apply**.
+
+The container uses br0 networking and gets its own IP. The web UI will be available at `http://<container-ip>`. Data is persisted to `/mnt/user/appdata/ontologist` by default.
+
 ## Features
 
 ### 14-Section Study Curriculum

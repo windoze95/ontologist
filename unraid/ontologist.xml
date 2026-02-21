@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Ontologist</Name>
+  <Repository>ghcr.io/windoze95/ontologist:latest</Repository>
+  <Registry>https://github.com/windoze95/ontologist/pkgs/container/ontologist</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/windoze95/ontologist/issues</Support>
+  <Project>https://github.com/windoze95/ontologist</Project>
+  <Overview>AI-powered study platform for mastering Palantir Foundry. 238 flashcards, 310 quiz questions, 12 hands-on labs, mock interviews, and an AI tutor — all personalized to your background.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/windoze95/ontologist/main/unraid/ontologist.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/windoze95/ontologist/main/docs/ontologist-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="80" Default="80" Mode="tcp" Description="Port for the Ontologist web interface." Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="PORT" Target="PORT" Default="80" Mode="" Description="Internal port the app listens on. Must match the Web UI Port." Type="Variable" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="Your Anthropic API key. Required for AI features (tutor, interviews, lab review, resume parsing)." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/ontologist" Mode="rw" Description="Persistent storage for the SQLite database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ontologist</Config>
+</Container>
