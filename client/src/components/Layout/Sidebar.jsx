@@ -59,7 +59,7 @@ export default function Sidebar({ onClose }) {
       <div className="flex items-center justify-between p-4 border-b border-navy-600">
         <div className="flex items-center gap-2">
           <GraduationCap className="h-6 w-6 text-electric-500" />
-          <span className="text-lg font-bold text-white">FDE Prep</span>
+          <span className="text-lg font-bold text-white">Ontologist</span>
         </div>
         <button
           onClick={onClose}
