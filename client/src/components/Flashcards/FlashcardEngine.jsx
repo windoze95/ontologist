@@ -299,13 +299,12 @@ export default function FlashcardEngine() {
           style={{
             transformStyle: 'preserve-3d',
             transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            minHeight: '320px',
           }}
         >
           {/* Front */}
           <div
-            className="absolute inset-0 bg-navy-800 rounded-xl border border-navy-600 p-6 flex flex-col"
-            style={{ backfaceVisibility: 'hidden' }}
+            className={`${isFlipped ? 'absolute inset-0' : 'relative'} bg-navy-800 rounded-xl border border-navy-600 p-6 flex flex-col`}
+            style={{ backfaceVisibility: 'hidden', minHeight: '320px' }}
           >
             <div className="flex items-center justify-between mb-4">
               <span
@@ -333,10 +332,11 @@ export default function FlashcardEngine() {
 
           {/* Back */}
           <div
-            className="absolute inset-0 bg-navy-800 rounded-xl border border-navy-600 p-6 flex flex-col"
+            className={`${!isFlipped ? 'absolute inset-0' : 'relative'} bg-navy-800 rounded-xl border border-navy-600 p-6 flex flex-col`}
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
+              minHeight: '320px',
             }}
           >
             <div className="flex items-center justify-between mb-4">
